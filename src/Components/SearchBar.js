@@ -10,7 +10,11 @@ const SearchBar = () => {
 
   return (
     <div className="ui segment">
-      <form onSubmit={(e) => onFormSubmit(e)} className="ui form">
+      <form
+        className="search-form"
+        onSubmit={(e) => onFormSubmit(e)}
+        className="ui form"
+      >
         <div className="field">
           <label>Search</label>
           <input
