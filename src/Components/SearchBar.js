@@ -3,9 +3,14 @@ import React, { useState } from "react";
 const SearchBar = () => {
   const [term, setTerm] = useState("");
 
+  const onFormSubmit = (event) => {
+    event.preventDefault();
+    console.log(term);
+  };
+
   return (
     <div className="ui segment">
-      <form className="ui form">
+      <form onSubmit={(e) => onFormSubmit(e)} className="ui form">
         <div className="field">
           <label>Search</label>
           <input
